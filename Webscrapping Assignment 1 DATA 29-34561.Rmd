@@ -1,0 +1,51 @@
+---
+title: "Makerspace Web Scrapping DATA 269-34561"
+author: "A Porambo"
+date: "2026-02-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("/Users/Owner/Documents/GitHub/Webscraping_Assigngement_1_DATA_269-34561") #Setting working directory in the GitHub repository.
+```
+
+```{r}
+install.packages("pdftools")
+install.packages("tabulapdf")
+install.packages("rJava")
+```
+
+
+```{r}
+#Loading libraries
+library(tidyverse)
+library(rvest)
+library(pdftools)
+library(tabulapdf)
+library(httr)
+```
+
+```{r}
+pdf_url <- "https://www.metmuseum.org/-/media/files/art/watson-library/museumexhibitions1870-2022.pdf"
+```
+
+```{r}
+plain_text <- pdf_text(pdf_url)[3:144]
+```
+
+```{r}
+cat(plain_text[1]) #checking content of the first page (page 3 in original pdf).
+```
+
+```{r}
+stringr::str_split(plain_text,"\n") #split into lines
+```
+
+
+```{r}
+
+```
+
+
+
