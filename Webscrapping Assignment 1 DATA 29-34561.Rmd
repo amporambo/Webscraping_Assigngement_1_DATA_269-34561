@@ -11,9 +11,9 @@ setwd("/Users/Owner/Documents/GitHub/Webscraping_Assigngement_1_DATA_269-34561")
 ```
 
 ```{r}
-install.packages("pdftools")
-install.packages("tabulapdf")
-install.packages("rJava")
+#install.packages("pdftools")
+#install.packages("tabulapdf")
+#install.packages("rJava")
 ```
 
 
@@ -44,8 +44,14 @@ stringr::str_split(plain_text,"\n") #split into lines
 
 
 ```{r}
-
+is.vector(plain_text)
 ```
 
+```{r}
+plain_text_enframe <- enframe(plain_text)
+```
 
+```{r}
+plain_
+```
 
